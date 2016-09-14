@@ -1,0 +1,13 @@
+# Ignore all
+*
+
+# Unignore files with extension and dirs
+!*.*
+!*/
+
+# Unignore test scripts
+!run
+
+# Ignore swap files
+*.swp
+*.swo
