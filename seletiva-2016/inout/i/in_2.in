@@ -1,0 +1,6 @@
+5
+1 add 20
+2 gotoif 20 4
+3 div 2
+4 gotoif 20 2
+5 halt

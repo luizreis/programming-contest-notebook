@@ -1,0 +1,9 @@
+8
+1 sub 1
+2 gotoif 0 7
+3 gotoif 0 6
+4 gotoif 0 5
+5 gotoif 0 1
+6 gotoif 0 4
+7 gotoif 0 3
+8 halt

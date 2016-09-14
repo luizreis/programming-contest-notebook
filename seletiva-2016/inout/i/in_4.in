@@ -1,0 +1,9 @@
+8
+1 sub 1
+2 gotoif 255 7
+3 gotoif 255 6
+4 gotoif 255 5
+5 gotoif 255 1
+6 gotoif 255 4
+7 gotoif 255 3
+8 halt

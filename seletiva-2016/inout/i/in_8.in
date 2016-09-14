@@ -1,0 +1,12 @@
+11
+1 add 238
+2 add 82
+3 or 160
+4 and 254
+5 or 193
+6 mul 198
+7 gotoif 193 3
+8 sub 132
+9 div 2
+10 div 3
+11 halt

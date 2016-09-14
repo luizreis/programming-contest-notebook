@@ -1,0 +1,31 @@
+30
+1 gotoif 1 4
+2 and 235
+3 or 216
+4 and 102
+5 add 253
+6 mul 115
+7 div 2
+8 xor 54
+9 sub 65
+10 mul 71
+11 and 45
+12 and 95
+13 gotoif 56 10
+14 add 68
+15 xor 8
+16 or 87
+17 and 200
+18 and 157
+19 and 26
+20 or 185
+21 and 208
+22 and 55
+23 xor 187
+24 add 231
+25 or 239
+26 div 234
+27 and 26
+28 sub 1
+29 mul 18
+30 halt

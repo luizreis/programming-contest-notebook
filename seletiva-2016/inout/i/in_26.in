@@ -1,0 +1,7 @@
+6
+1 sub 13
+2 gotoif 255 5
+3 gotoif 0 4
+4 gotoif 0 3
+5 mul 2
+6 halt

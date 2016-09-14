@@ -1,0 +1,70 @@
+69
+1 and 212
+2 or 57
+3 mul 83
+4 add 161
+5 xor 110
+6 div 63
+7 or 205
+8 gotoif 128 25
+9 and 188
+10 and 51
+11 xor 140
+12 div 11
+13 xor 12
+14 add 172
+15 mul 220
+16 sub 230
+17 sub 194
+18 sub 205
+19 div 34
+20 div 65
+21 or 83
+22 gotoif 74 7
+23 and 243
+24 xor 128
+25 gotoif 30 40
+26 div 93
+27 sub 145
+28 sub 113
+29 or 123
+30 or 198
+31 mul 199
+32 sub 227
+33 and 92
+34 or 167
+35 or 170
+36 mul 52
+37 or 68
+38 add 16
+39 div 120
+40 gotoif 150 11
+41 mul 146
+42 gotoif 251 25
+43 add 168
+44 xor 126
+45 gotoif 69 3
+46 add 187
+47 sub 84
+48 add 128
+49 sub 107
+50 div 38
+51 add 191
+52 xor 152
+53 mul 151
+54 gotoif 45 63
+55 sub 169
+56 or 12
+57 and 29
+58 and 27
+59 div 35
+60 div 224
+61 div 175
+62 sub 111
+63 gotoif 97 8
+64 mul 181
+65 gotoif 116 46
+66 or 250
+67 gotoif 193 27
+68 xor 106
+69 halt

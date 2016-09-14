@@ -1,0 +1,9 @@
+8
+1 add 7
+2 xor 2
+3 gotoif 5 6
+4 and 0
+5 add 3
+6 or 2
+7 gotoif 4 2
+8 halt

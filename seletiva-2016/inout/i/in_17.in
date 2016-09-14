@@ -1,0 +1,46 @@
+45
+1 gotoif 188 32
+2 or 97
+3 gotoif 225 22
+4 xor 12
+5 div 188
+6 sub 161
+7 mul 253
+8 sub 122
+9 xor 1
+10 or 196
+11 gotoif 66 44
+12 or 206
+13 mul 80
+14 and 122
+15 gotoif 55 38
+16 or 123
+17 xor 114
+18 and 140
+19 xor 207
+20 add 151
+21 sub 186
+22 and 226
+23 or 226
+24 div 210
+25 gotoif 135 15
+26 sub 56
+27 or 43
+28 sub 41
+29 xor 72
+30 div 221
+31 or 190
+32 div 63
+33 mul 7
+34 xor 233
+35 gotoif 90 19
+36 sub 234
+37 and 62
+38 and 32
+39 sub 115
+40 div 152
+41 and 179
+42 or 136
+43 and 22
+44 xor 133
+45 halt

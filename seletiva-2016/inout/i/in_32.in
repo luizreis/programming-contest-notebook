@@ -1,0 +1,101 @@
+100
+1 div 4
+2 div 4
+3 or 19
+4 sub 232
+5 mul 236
+6 gotoif 117 40
+7 or 234
+8 and 232
+9 div 1
+10 div 1
+11 div 1
+12 xor 117
+13 xor 200
+14 div 3
+15 div 4
+16 add 246
+17 gotoif 179 14
+18 mul 198
+19 div 3
+20 div 3
+21 and 40
+22 add 254
+23 and 33
+24 sub 162
+25 and 243
+26 xor 68
+27 sub 163
+28 mul 201
+29 xor 58
+30 and 148
+31 div 1
+32 div 4
+33 xor 102
+34 gotoif 155 55
+35 mul 149
+36 gotoif 205 35
+37 or 246
+38 xor 174
+39 sub 154
+40 mul 199
+41 xor 163
+42 mul 176
+43 or 176
+44 div 2
+45 and 238
+46 and 55
+47 xor 227
+48 or 197
+49 or 56
+50 gotoif 231 51
+51 sub 39
+52 and 232
+53 xor 67
+54 sub 176
+55 or 72
+56 gotoif 178 5
+57 gotoif 98 70
+58 mul 255
+59 xor 24
+60 div 4
+61 gotoif 123 43
+62 and 67
+63 div 3
+64 or 197
+65 gotoif 219 74
+66 mul 118
+67 div 4
+68 xor 26
+69 add 112
+70 mul 213
+71 mul 132
+72 and 120
+73 or 112
+74 xor 172
+75 xor 209
+76 add 50
+77 and 156
+78 gotoif 170 12
+79 and 79
+80 gotoif 193 56
+81 xor 251
+82 sub 212
+83 or 249
+84 or 111
+85 xor 23
+86 and 163
+87 add 145
+88 div 2
+89 or 1
+90 gotoif 51 38
+91 div 3
+92 div 4
+93 and 151
+94 mul 163
+95 gotoif 185 16
+96 mul 132
+97 xor 23
+98 or 211
+99 gotoif 234 81
+100 halt

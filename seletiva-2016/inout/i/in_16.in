@@ -1,0 +1,14 @@
+13
+1 mul 142
+2 or 124
+3 div 169
+4 add 95
+5 mul 111
+6 mul 10
+7 mul 78
+8 gotoif 117 13
+9 mul 151
+10 mul 139
+11 mul 177
+12 and 66
+13 halt
