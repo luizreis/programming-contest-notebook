@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for i in $(ls inout/$1/*.in | rev | cut -c4- | rev);do
+  echo "Test case $i"
+  ./$1 < ${i}.in > $i.run
+  if ( ! diff $i.run $i.sol > /dev/null); then
+    echo $i
+    diff $i.run $i.sol
+  fi
+  rm $i.run
+done
