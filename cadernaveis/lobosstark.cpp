@@ -1,16 +1,16 @@
 /*
 function stableMatching {
-    Initialize all m ∈ M and w ∈ W to free
-    while ∃ free man m who still has a woman w to propose to {
-       w = first woman on m’s list to whom m has not yet proposed
+    Initialize all men and women to free
+    while there is a free man m who still has a woman w to propose to {
+       w = first woman on m list to whom m has not yet proposed
        if w is free
          (m, w) become engaged
-       else some pair (m', w) already exists
-         if w prefers m to m'
-            m' becomes free
+       else some pair (m1, w) already exists
+         if w prefers m to m1
+            m1 becomes free
            (m, w) become engaged 
          else
-           (m', w) remain engaged
+           (m1, w) remain engaged
     }
 }
 */
