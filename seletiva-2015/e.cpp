@@ -72,7 +72,6 @@ int hopcroft_karp() {
 
 int main () {
     scanf("%d %d", &n, &m);
-    memset(match, 0, sizeof(match));
     size = 0;
     for(int i = 1; i <= n; i++) {
         scanf("%d", &q);
@@ -83,19 +82,6 @@ int main () {
             G[p].push_back(i);
         }
     }
-
-    for (int i = 1; i <= n; i++) {
-        if (match[i]) continue;
-        for (int j = 0; j < G[i].size(); j++) {
-            if (!match[G[i][j]]) {
-                match[i] = G[i][j];
-                match[G[i][j]] = i;
-                size++;
-                break;
-            }
-        }
-    }
-
     printf("%d\n", hopcroft_karp());
     return 0;
 }
