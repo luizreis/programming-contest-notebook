@@ -1,37 +1,68 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n, m, k;
-vector <pair <int, int> > adj[1001];
-int moeda[1001];
-int nm;
-int vis[(((1<<k)-1)<<1)+1][1001];
+typedef pair<int, int> pii;
+typedef pair<pii, pii> piiii;
 
-vector <pair <long long, int> > red[1001];
+const int MAXN = 1005;
+const int MAXK = 12;
+const int INF = 0x3f3f3f3f;
 
-long long dij(){
-    priority_queue <pair<>, vector <>, greater <> > Q;
-    memset(vis, 0, sizeof vis);
-    Q.push(make_pair(make_pair(0, 0), 1));
+int n, m, k, coin[MAXN];
+vector<pii> adj[MAXN], g[MAXK+1];
+bool vis[MAXN];
+int mem[4][(((1<<MAXK)-1)<<1)+10][MAXK+1];
+
+void dij(int r) {
+    int addz = 1;
+    memset(vis, 0, sizeof(vis));
+    priority_queue< pair<int, int>, vector< pair<int, int> >, greater< pair<int, int> > > Q;
+    Q.push(make_pair(0, r));
+    while(!Q.empty()) {
+        int d = Q.top().first;
+        int v = Q.top().second;
+        Q.pop();
+        if (v == 0 && v == r && addz && d > 0) {
+            g[coin[r]].push_back(make_pair(v, d));
+            addz = 0;
+        }
+        if (vis[v]) continue;
+        vis[v] = 1;
+        //printf("dij for %d: coin is %d and v is %d | dist is %d\n", r, coin[v], v, d);
+        if (coin[v] && v != r) g[coin[r]].push_back(make_pair(coin[v], d));
+        if (v == 0 && v != r) {
+            g[coin[r]].push_back(make_pair(v, d));
+            continue;
+        }
+        for (int i = 0; i < adj[v].size(); i++)
+            Q.push(make_pair(d + adj[v][i].second, adj[v][i].first));
+    }
+}
+
+int pd() {
+    priority_queue <pair<pair<long long, int>, pair<int, int> >, vector <pair<pair<long long, int>, pair<int, int> > >, greater < pair<pair<long long, int>, pair<int, int> > > > Q;
+    memset(mem, 0, sizeof mem);
+    Q.push(make_pair(make_pair(0, 0), make_pair(0, 0)));
     while(!Q.empty()){
         long long d = Q.top().first.first;
         int vol = Q.top().first.second;
-        int u = Q.top().second;
+        int bm = Q.top().second.first;
+        int u = Q.top().second.second;
         Q.pop();
 
-        if(u==1) vol++;
-    //        printf("dist %lld vol %d, bm %x(%x), u %d\n", d, vol, bm,(((1<<k)-1)<<1) , u);
-        if(vol == 4 && u == 1 && bm == ((1<<k)-1)<<1) return d;
+        if(u==0) vol++;
+        //printf("dist %lld vol %d, bm %x(%x), u %d\n", d, vol, bm,(((1<<k)-1)<<1) , u);
+        if(vol == 4 && u == 0 && bm == ((1<<k)-1)<<1) return d;
         if(vol == 4) continue;
 
-        if(vis[vol][bm][u]) continue;
-        vis[vol][bm][u] = 1;
+        if(mem[vol][bm][u]) continue;
+        mem[vol][bm][u] = 1;
 
-        for(int i=0; i<adj[u].size(); i++){
-            int v = adj[u][i].second;
-            int w = adj[u][i].first;
+        for(int i=0; i<g[u].size(); i++){
+            int v = g[u][i].first;
+            int w = g[u][i].second;
             int bt = bm;
-            if(moeda[v]) bt |= (1<<moeda[v]);
+            if(v) bt |= (1<<v);
             Q.push(make_pair(make_pair(d+w, vol), make_pair(bt, v)));
         }
     }
@@ -39,24 +70,32 @@ long long dij(){
     return -1;
 }
 
-int main(){
+int main() {
+    memset(coin, 0, sizeof(coin));
+    int a, b, t;
     scanf("%d %d %d", &n, &m, &k);
-    for(int i=0; i<m; i++){
-        int a, b, c;
-        scanf("%d %d %d", &a, &b, &c);
-        adj[a].push_back(make_pair(c, b));
+    for (int i = 0; i < m; i++) {
+        scanf("%d %d %d", &a, &b, &t);
+        a--, b--;
+        adj[a].push_back(make_pair(b, t));
     }
-    memset(moeda, 0, sizeof moeda);
-    nm=1;
-    for(int i=0; i<k; i++){
-        int a;
-        scanf("%d", &a);
-        moeda[a]=nm++;
+    for (int i = 1; i <= k; i++) {
+        scanf("%d", &t);
+        coin[--t] = i;
     }
-
-    long long a = dij();
-    if(a < 0) printf("impossivel\n");
-    else printf("%lld\n", a);
-
+    dij(0);
+    for (int i = 1; i < n; i++) {
+        if(coin[i]) dij(i);
+    }
+    /*for (int i = 0; i <= k; i++) {
+        printf("%d adj list: ", i);
+        for (int j = 0; j < g[i].size(); j++) {
+            printf("%d(%d) ", g[i][j].first, g[i][j].second);
+        }
+        printf("\n");
+    }*/
+    long long ans = pd();
+    if (ans == -1) printf("impossivel\n");
+    else printf("%lld\n", ans);
     return 0;
 }
