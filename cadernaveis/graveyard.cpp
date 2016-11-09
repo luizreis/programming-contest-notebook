@@ -33,7 +33,7 @@ int bellman_ford(int x, int y, int dx, int dy) {
     
     for (int i = 0; i < w; i++) {
         for (int j = 0; j < h; j++) {
-            if (i == dx && j == dy) continue;
+            if (i == dx && j == dy) return 0; // the moment he reaches it he exits
             for (int k = 0; k < adj[i][j].size(); k++) {
                 if (dist[i][j] != INF && dist[i][j] + adj[i][j][k].second < dist[adj[i][j][k].first.first][adj[i][j][k].first.second]) {
                     return -1;
