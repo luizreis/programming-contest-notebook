@@ -1,0 +1,55 @@
+\usepackage[utf8]{inputenc}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[type={CC},modifier={zero},version={1.0}]{doclicense}
+\usepackage{multicol}
+\usepackage{lscape}
+
+\title{Programming contest notebook}
+\author{Luiz Felipe Abrão Reis}
+\date{ }
+
+\definecolor{zebra1}{rgb}{0.9,0.9,0.9}
+\definecolor{zebra2}{rgb}{1,1,1}
+
+\lstdefinestyle{defaultStyle}
+{
+  basicstyle=\footnotesize,
+  tabsize=2,
+  captionpos=b,
+  frame=lines,
+  breaklines=true,
+  keepspaces=true
+}
+
+\lstdefinestyle{cpp}
+{
+  style=defaultStyle,
+  language=C++,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\zebra{zebra1}{zebra2}{}
+}
+
+% commands
+\newcommand\realnumberstyle[1]{}
+\makeatletter
+\newcommand{\zebra}[3]{%
+    {\realnumberstyle{#3}}%
+    \begingroup
+    \lst@basicstyle
+    \ifodd\value{lstnumber}%
+        \color{#1}%
+    \else
+        \color{#2}%
+    \fi
+        \rlap{\hspace*{\lst@numbersep}%
+        \color@block{\linewidth}{\ht\strutbox}{\dp\strutbox}%
+        }%
+    \endgroup
+}
+\makeatother
+
+\newenvironment{alignbottom}{\par\vspace*{\fill}}{\clearpage}
+

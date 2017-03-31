@@ -1,0 +1,234 @@
+\documentclass[11pt, a4paper, twoside, notitlepage]{article}
+
+\include{header}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\tableofcontents
+\alignbottom{\doclicenseThis}
+\end{titlepage}
+
+% how-to include a new topic
+%\section{Section Name}
+
+% how-to include a new code
+%\subsection{Code Name}
+%
+% Basic code explanation
+%
+%\lstinputlisting[style=cpp]{code/codename.cpp}
+%
+%\newpage
+
+\section{Strings}
+
+\subsection{KMP $<\mathcal{O}(N+K)>$ - I Love Strings!}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/ilovestrings_kmp.cpp}
+
+\subsection{Aho Corasick $<\mathcal{O}(N+K+Z)>$ - Cultivando Strings}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/cultivando.cpp}
+
+\newpage
+
+\section{Math}
+
+\subsection{Modular Inverse $<\mathcal{O}(\log N)>$ - Jupiter Ataca!}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/jupiter.cpp}
+
+\subsection{Pisano Period - Crescimento das Populações de Bacilos}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/koch.cpp}
+
+\subsection{Sieve of Eratosthenes $<\mathcal{O}(N\log \log N)>$ - Conte os fatores}
+
+\lstinputlisting[style=cpp]{code/materia/treino-6/fatores.cpp}
+
+\newpage
+
+\section{Graphs}
+
+\subsection{Least Common Ancestor $<\mathcal{O}(N*\log N)$, $\mathcal{O}(\log N)>$ - Ant's Colony}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/ants10.cpp}
+
+\subsection{Least Common Ancestor $<\mathcal{O}(N*\log N)$, $\mathcal{O}(\log N)>$ - Nlogonian Tickets}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/ntickets.cpp}
+
+\subsection{Strongly Connected Components $<\mathcal{O}(V+E)>$ - Ir e Vir}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/irevir.cpp}
+
+\subsection{Max Flow $<\mathcal{O}(V*E^{2})>$ - Internet Bandwidth}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/internetbandwith.cpp}
+
+\subsection{Dijkstra $<\mathcal{O}(V+E*\log E)>$ - Engarrafamento}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/engarraf.cpp}
+
+\subsection{Dijkstra with bitmask - Desafio das Moedas Prateadas}
+
+\lstinputlisting[style=cpp]{code/materia/prova-2/f.cpp}
+
+\subsection{Articulation Points $<\mathcal{O}(V+E)>$ - Manutenção}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/manut.cpp}
+
+\subsection{Bellman-Ford $<\mathcal{O}(V*E^{2})>$ - Haunted Graveyard}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/graveyard.cpp}
+
+\subsection{Dominators $<\mathcal{O}(V+E)>$ - Bytelandian Information Agency}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/bia.cpp}
+
+\subsection{Bridges $<\mathcal{O}(V+E)>$ - Série de Tubos}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/serietubos.cpp}
+
+\subsection{Stable Marriage $<\mathcal{O}(N^{2})>$ - Lobos Stark}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/lobosstark.cpp}
+
+\subsection{Topological Sort $<\mathcal{O}(V+E)>$ - Orkut}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/orkut.cpp}
+
+\subsection{BFS with bitmask - O Labirinto de Ninguém}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/labirintoninguem.cpp}
+
+\subsection{Min Cost Max Flow $<\mathcal{O}((V+E)*\max F)>$ - Data Flow}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/dataflow.cpp}
+
+\subsection{Bipartite Matching $<\mathcal{O}(\sqrt{V}*E)>$ - Final de Fisiologia Canina}
+
+\lstinputlisting[style=cpp]{code/seletiva-2015/e.cpp}
+
+\subsection{Union Find $<\mathcal{O}(1)*OP>$ - Virtual Friends}
+
+\lstinputlisting[style=cpp]{code/aquecimento-bh/friends.cpp}
+
+\newpage
+
+\section{Geometry}
+
+\subsection{Convex Hull $<\mathcal{O}(N\log N)>$ - Camadas de Cebola}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/cebola.cpp}
+
+\subsection{Max Enclosing Circle (Circle Sweep) $<\mathcal{O}(N\log N)>$ - Phone Cell}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/phonecell.cpp}
+
+\subsection{Closest Points $<\mathcal{O}(N\log N)>$ - Problema dos Pares Mais Próximos}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/closestpairs.cpp}
+
+\subsection{Rotating Calipers $<\mathcal{O}(N)>$ - Trash Removal}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/trashremoval.cpp}
+
+\subsection{Line Sweep $<\mathcal{O}(N\log N)>$ - Janela}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/janela.cpp}
+
+\subsection{Angle Sweep (Circunference covered) $<\mathcal{O}(N\log N)>$ - Planet Destruction}
+
+\lstinputlisting[style=cpp]{code/aquecimento-bh/planet.cpp}
+
+\subsection{Angle Sweep with Intersections - Hide and Seek}
+
+\lstinputlisting[style=cpp]{code/latin-2013/hideseek.cpp}
+
+\subsection{Polygon Area $<\mathcal{O}(N)>$ - Ingress}
+
+\lstinputlisting[style=cpp]{code/seletiva-2015/c.cpp}
+
+\subsection{Smallest Enclosing Circle $<\mathcal{O}(N^{2})>$ - Torres de Telefonia Celular}
+
+\lstinputlisting[style=cpp]{code/materia/treino-2/tcelula.cpp}
+
+\newpage
+
+\section{Data Structures}
+
+\subsection{BIT $<\mathcal{O}(\log MaxVal)$, $\mathcal{O}(MaxVal)>$ - Balé}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/bale11.cpp}
+
+\subsection{Segment Tree $<\mathcal{O}(N\log N), \mathcal{O}(\log N), \mathcal{O}(\log N)>$ - To Poland}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/topoland.cpp}
+
+\subsection{Sum Matrix (DP) $<\mathcal{O}(N*M)>$ - Colheita de Caju}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/colheitacajus.cpp}
+
+\subsection{Lazy Segment Tree $<\mathcal{O}(N\log N), \mathcal{O}(\log N), \mathcal{O}(\log N)>$ - Homem, Elefante, Rato}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/homem.cpp}
+
+\subsection{Min Range DP - Keep it Energized}
+
+\lstinputlisting[style=cpp]{code/latin-2015/keep.cpp}
+
+\newpage
+
+\section{Algorithms}
+
+\subsection{Knapsack - Pedido de Desculpas}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/desculpa.cpp}
+
+\subsection{Linear Transformation + Fast Pow - Quantas Chamadas Recursivas}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/quantaschamadas.cpp}
+
+\subsection{LT + FP + Search skipping interval - Registrador de Deslocamento}
+
+\lstinputlisting[style=cpp]{code/materia/treino-4/registra.cpp}
+
+\subsection{Big Integer - Krakóvia}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/krakovia.py}
+
+\subsection{Iterative DP - Bolsa de Valores}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/bolsadevalores.cpp}
+
+\subsection{Find m-th element in sequence DP - Enumerating Brackets}
+
+\lstinputlisting[style=cpp]{code/aquecimento-bh/brackets.cpp}
+
+\subsection{Max Gain with Probability DP - Quiz Universitário}
+
+\lstinputlisting[style=cpp]{code/seletiva-2016/f.cpp}
+
+\subsection{Max Increasing Subsequence DP - Trainsorting}
+
+\lstinputlisting[style=cpp]{code/aquecimento-bh/trainsorting.cpp}
+
+\subsection{Binary Search - Pie!}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/pie.cpp}
+
+\subsection{Ternary Search - A Caminhada da Vergonha de Cersei}
+
+\lstinputlisting[style=cpp]{code/cadernaveis/cersei.cpp}
+
+\subsection{Simpson Integration - Environment Protection}
+
+\lstinputlisting[style=cpp]{code/latin-2012/environment.cpp}
+
+\newpage
+
+\end{document}
+
